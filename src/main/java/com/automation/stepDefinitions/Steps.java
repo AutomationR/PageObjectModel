@@ -3,6 +3,7 @@ package com.automation.stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.automation.pages.LetsTalkTea_Checkout;
 import com.automation.pages.LetsTalkTea_HomePage;
 
 import cucumber.api.java.en.Given;
@@ -11,7 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Steps {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	//LetsTalkTea_HomePage homepageObj= new LetsTalkTea_HomePage(driver);
 
 	
@@ -53,6 +54,14 @@ public class Steps {
 	    homepageObj.clickOnCheckoutLink();
 	    
 	}
-
+	
+	@When("^Enter the details in the checkout page$")
+	public void enter_the_details_in_the_checkout_page() throws Throwable {
+		LetsTalkTea_Checkout checkoutpageObj= new LetsTalkTea_Checkout(driver);
+		checkoutpageObj.customer_Info();
+	
+	
+	}
+	
 
 }

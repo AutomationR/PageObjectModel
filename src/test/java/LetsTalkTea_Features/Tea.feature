@@ -10,5 +10,9 @@ Feature: LetsTalkTea
     And Click on the our menu link
     And Click on the our letstalktea link
     And Click on the our checkout link
+    And  Enter the details in the checkout page
+    
+  
+    
     
   
