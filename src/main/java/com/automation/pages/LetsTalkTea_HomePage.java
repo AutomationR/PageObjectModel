@@ -18,6 +18,17 @@ public class LetsTalkTea_HomePage extends SeleniumHelper {
 
 	@FindBy(linkText = "Our Passion")
 	private WebElement passion_link;
+	
+	@FindBy(linkText = "Menu")
+	private WebElement menu_link;
+
+	@FindBy(linkText = "Let's Talk Tea")
+	private WebElement letstalktea_link;
+	
+	@FindBy(linkText = "Check Out")
+	private WebElement checkout_link;
+	
+
 
 	public void clickOnWelcomeLink() {
 		click_OnElement(welcome_link);
@@ -28,5 +39,22 @@ public class LetsTalkTea_HomePage extends SeleniumHelper {
 		click_OnElement(passion_link);
 
 	}
+	
 
+	public void clickOnMenuLink() {
+		click_OnElement(menu_link);
+
+	}
+	
+	public void clickOnletstalkteaLink() {
+		click_OnElement(letstalktea_link);
+
+	}
+	
+	public void clickOnCheckoutLink() {
+		click_OnElement(checkout_link);
+
+	}
+	
+	
 }
