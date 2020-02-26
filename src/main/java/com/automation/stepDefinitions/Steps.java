@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.automation.pages.LetsTalkTea_Checkout;
 import com.automation.pages.LetsTalkTea_HomePage;
+import com.automation.pages.LetsTalkTea_letstalktea;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -63,5 +64,15 @@ public class Steps {
 	
 	}
 	
+
+	@When("^Enter details in the lets talk tea page$")
+	public void enter_details_in_the_lets_talk_tea_page() throws Throwable {
+	
+	LetsTalkTea_letstalktea letstalkteapageObj= new LetsTalkTea_letstalktea(driver);
+	letstalkteapageObj.letstalktea_Info();
+
+}
+
+
 
 }
