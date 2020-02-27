@@ -6,12 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automation.utilities.SeleniumHelper;
+import com.automation.utilities.TestngHelper;
 public class LetsTalkTea_Checkout extends SeleniumHelper {
 	
 	private WebDriver Checkout_driver;
 	
 	public LetsTalkTea_Checkout(WebDriver Checkout_driver) {
 		PageFactory.initElements(Checkout_driver, this);
+			
 	}
 	
 	@FindBy(id = "email")
@@ -39,6 +41,12 @@ public class LetsTalkTea_Checkout extends SeleniumHelper {
 	
 	public void customer_Info() {
 		
+		
+		/*
+		 * String expTitle= "Check Out"; String actTitle = Checkout_driver.getTitle();
+		 * String msg= "This is to verify checkout page title";
+		 * TestngHelper.assertequal(actTitle, expTitle, msg);
+		 */
 		sendKeys_OnElement(email_TextBox, "abc@gmail.com");
 		sendKeys_OnElement(name_TextBox, "xxyyzz");
 		sendKeys_OnElement(address_TextBox, "Chennai");

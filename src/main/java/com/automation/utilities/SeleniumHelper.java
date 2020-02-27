@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -118,6 +119,18 @@ public class SeleniumHelper extends BasePage{
 			System.out.println("unable to select from dropdown by  value");
 		}
 	}
+	
+	//scroll window
+	public static void scrollWindow(WebDriver driver) {
+	try {
+	JavascriptExecutor jse = (JavascriptExecutor)driver;
+	jse.executeScript("window.scrollBy(0,1000)", "");
+	} catch (Exception e) {
+	System.out.println("unable to scroll window");
+	}
+
+	}
+
 
 	public static void assert1(String act, String exp) {
 		try {

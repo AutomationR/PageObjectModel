@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automation.utilities.SeleniumHelper;
+import com.automation.utilities.TestngHelper;
 
 public class LetsTalkTea_letstalktea extends SeleniumHelper{
 	
@@ -34,7 +35,14 @@ public LetsTalkTea_letstalktea(WebDriver letstalktea_driver) {
 		
 	public void letstalktea_Info() {
 		
+		/*
+		 * String expTitle= "Let's Talk Tea"; String actTitle =
+		 * letstalktea_driver.getTitle(); String msg=
+		 * "This is to verify lets talk tea page title";
+		 * TestngHelper.assertequal(actTitle, expTitle, msg);
+		 */
 		click_OnElement(letstalktea_link);
+		WebDriver letstalktea_driver;
 		sendKeys_OnElement(email_TextBox, "valli@gmail.com");
 		sendKeys_OnElement(name_TextBox, "ABCD");
 		sendKeys_OnElement(subject_TextBox, "Hello Message");
